@@ -9,6 +9,7 @@ docker compose up out
 
 #### Opção 2
 - Sobrescrever o conteudo do arquivo movielist.csv
+- Executar o projeto novamente
 
 
 ### Executar testes
