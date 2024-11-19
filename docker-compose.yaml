@@ -1,0 +1,24 @@
+services:
+  out:
+    container_name: out
+    build: .
+    ports:
+      - "9999:3000"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    env_file:
+      - .env
+    command: npm run start:dev
+    volumes:
+      - ./files:/app/files
+      - ./src:/app/src
+
+  out-tests:
+    build: .
+    command: npm run test:e2e
+    volumes:
+      - ./files:/app/files
+      - ./src:/app/src
+      - ./test:/app/test
+    environment:
+      - NODE_ENV=test
