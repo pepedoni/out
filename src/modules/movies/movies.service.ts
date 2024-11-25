@@ -93,7 +93,7 @@ export class MoviesService implements IMoviesService, OnModuleInit {
         } 
       }
       if (producersWithMaxInterval.length === 0 || maxInterval >= producersWithMaxInterval[0].interval) {
-        const producerAwardInterval = this.getProducerAwardInterval(producer, minInterval, sortedYears[intervals.indexOf(minInterval)], sortedYears[intervals.indexOf(minInterval) + 1]);
+        const producerAwardInterval = this.getProducerAwardInterval(producer, maxInterval, sortedYears[intervals.indexOf(maxInterval)], sortedYears[intervals.indexOf(maxInterval) + 1]);
         if(producersWithMaxInterval.length === 0 || maxInterval > producersWithMaxInterval[0].interval) {
           producersWithMaxInterval = [producerAwardInterval];
         } else {

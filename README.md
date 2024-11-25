@@ -1,6 +1,8 @@
 ### Execução do Projeto
 docker compose up out
 
+curl --location 'http://127.0.0.1:9999/movies/producers/intervalAward'
+
 ### Alterando arquivo para leitura
 #### Opção 1
 - Mover o arquivo para pasta files
